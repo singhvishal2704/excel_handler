@@ -1,25 +1,30 @@
+const { theme } = require('./src/assets/theme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx}"
-  ],
-  darkMode: 'class', // Enable dark mode manually
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#2563eb',     // blue-600
-          light: '#3b82f6',       // blue-500
-          dark: '#1e40af',        // blue-800
+          DEFAULT: theme.colors.primary,
+          light: theme.colors.light,
+          dark: theme.colors.dark,
         },
         brand: {
-          DEFAULT: '#0f172a',     // slate-900
+          DEFAULT: theme.colors.brand,
         },
+        background: theme.colors.background,
+        surface: theme.colors.surface,
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-      }
+        sans: theme.fontFamily.sans,
+      },
+      maxWidth: {
+        container: theme.spacing.container,
+      },
     },
   },
   plugins: [],
-}
+};
