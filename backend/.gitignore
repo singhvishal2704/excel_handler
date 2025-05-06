@@ -1,0 +1,8 @@
+**/migrations/*
+**/__pycache__/*
+.env
+# Ignore all contents inside temp_uploaded_files
+/media/temp_uploaded_files/*
+# But keep the folder itself
+!/media/temp_uploaded_files/.gitkeep
+/venv
