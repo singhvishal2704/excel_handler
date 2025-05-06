@@ -2,7 +2,7 @@ import pickle
 import pandas as pd
 from django.core.cache import cache
 
-SESSION_TTL = 6000  # 100 minutes
+SESSION_TTL = 600  # 10 minutes
 
 
 def cache_dataframe(session_id: str, df: pd.DataFrame):
